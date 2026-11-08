@@ -121,7 +121,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:var(--void);color:var(
 .box{position:relative;width:min(calc(390px * var(--u)),100%);padding:calc(36px * var(--u)) calc(26px * var(--u)) calc(28px * var(--u));text-align:center;background:var(--grain),linear-gradient(180deg,var(--slab2),var(--slab));isolation:isolate;
   clip-path:polygon(18px 0,calc(100% - 18px) 0,100% 18px,100% calc(100% - 18px),calc(100% - 18px) 100%,18px 100%,0 calc(100% - 18px),0 18px)}
 .box::before{content:"";position:absolute;inset:7px;z-index:-1;border:1px solid var(--moss);clip-path:polygon(13px 0,calc(100% - 13px) 0,100% 13px,100% calc(100% - 13px),calc(100% - 13px) 100%,13px 100%,0 calc(100% - 13px),0 13px);pointer-events:none}
-.box h2{margin:0 0 4px;font-family:var(--f-han);font-weight:900;font-size:26px;letter-spacing:.2em;color:var(--bone);text-shadow:0 0 14px rgba(139,230,166,.3)}
+.box h2{margin:0 0 4px;font-family:var(--f-han);font-weight:900;font-size:26px;letter-spacing:.2em;color:var(--bone);text-shadow:0 0 14px rgba(139,230,166,.3)} .p-nickrow{display:flex;justify-content:center;align-items:center;gap:4px} .p-nickrow h2{margin:0 0 4px} .iconbtn{background:none;border:0;padding:5px;cursor:pointer;color:var(--bone);opacity:.55;line-height:0;border-radius:8px;flex:none} .iconbtn svg{width:15px;height:15px;display:block} .iconbtn:active{opacity:1;transform:scale(.9)} #p-editrow{margin:8px 0 2px;text-align:left} #p-editbtns{gap:10px;justify-content:center;margin:8px 0 2px}
 .box .bl{display:block;font-family:var(--f-black);color:var(--venom);font-size:20px;margin-bottom:6px}
 .box p{color:var(--mute)}
 .big{font-family:var(--f-cap);font-size:52px;font-weight:800;margin:0 0 4px;font-variant-numeric:tabular-nums;color:var(--bone);text-shadow:0 0 18px rgba(139,230,166,.3)}
@@ -359,7 +359,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:var(--void);color:var(
 </div></section>
 
 <section class="panel" id="profile"><div class="box"><svg class="orn tl"><use href="#orn"/></svg><svg class="orn tr"><use href="#orn"/></svg><svg class="orn obl"><use href="#orn"/></svg><svg class="orn br"><use href="#orn"/></svg>
-  <span class="bl">Dossier</span><h2 id="p-nick">咪菇</h2><div class="p-acc" id="p-acc">@account</div>
+  <span class="bl">Dossier</span><div class="p-nickrow"><h2 id="p-nick">咪菇</h2><button type="button" class="iconbtn" id="p-edit" aria-label="修改昵称"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg></button></div><label class="fld" id="p-editrow" style="display:none"><span>新昵称</span><input id="p-nick-in" maxlength="12" autocomplete="off" placeholder="1–12 个字"><em id="p-nick-tip"></em></label><div id="p-editbtns" style="display:none"><button class="btn primary sm" type="button" id="p-nick-save">保存</button><button class="btn ghost sm" type="button" id="p-nick-cancel">取消</button></div><div class="p-acc" id="p-acc">@account</div>
   <div class="grid"><div>最远<b id="p-best">0 米</b></div><div>排名<b id="p-rank">—</b></div><div>局数<b id="p-runs">0</b></div></div>
   <div class="btns"><button class="btn primary" id="p-board">查看排行榜</button><div style="display:flex;gap:10px"><button class="btn ghost sm" id="p-logout">退出登录</button><button class="btn ghost sm" data-back>返回</button></div></div>
 </div></section>
