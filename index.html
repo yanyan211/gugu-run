@@ -81,6 +81,14 @@ html,body{margin:0;height:100%;overflow:hidden;background:var(--void);color:var(
 
 /* —— 主菜单 —— */
 #menu{justify-content:space-between}
+/* —— 主页顶部滚动横幅（绿底白字，仅主菜单显示） —— */
+.topbanner{position:absolute;top:0;left:0;right:0;z-index:5;overflow:hidden;white-space:nowrap;pointer-events:none;background:#3a9459;color:#fff;border-bottom:2px solid #fff;text-shadow:0 1px 0 rgba(0,0,0,.18);font-family:var(--f-han);font-weight:700;font-size:calc(15px * var(--u));line-height:1;padding:calc(9px * var(--u)) 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.topbanner .tb-track{display:inline-flex;width:max-content;animation:runmarquee 28s linear infinite;will-change:transform}
+.topbanner .tb-track span{padding-right:28px}
+@keyframes runmarquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-33.3333%,0,0)}}
+@media (prefers-reduced-motion:reduce){.topbanner .tb-track{animation-duration:40s}}
+#menu .crest{margin-top:calc(3vh + 44px * var(--u))}
+#btn-mute{top:calc(max(14px,env(safe-area-inset-top)) + 46px * var(--u))}
 .crest{margin-top:3vh;text-align:center;display:flex;flex-direction:column;align-items:center;gap:2px}
 .crest .bl{font-family:var(--f-black);font-size:clamp(26px,7vw,40px);color:var(--venom);text-shadow:0 0 16px rgba(139,230,166,.35);line-height:1}
 .crest h1{margin:0;font-family:var(--f-han);font-weight:900;font-size:clamp(44px,12vw,78px);letter-spacing:.12em;line-height:1.1;color:var(--bone);
@@ -287,6 +295,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:var(--void);color:var(
 <div id="loading"><div class="bl">Gugu's Escape</div><div id="loadbar"><i></i></div><small>咪菇正在推开城堡大门…</small></div>
 
 <section class="panel" id="menu">
+  <div class="topbanner" aria-label="公告"><div class="tb-track"><span>白金妈们四平台billboard榜单积分送起！具体教程可以看vb 张函瑞_1018猫爪印记，从Global窗口进入，不要送错榜单哦</span><span aria-hidden="true">白金妈们四平台billboard榜单积分送起！具体教程可以看vb 张函瑞_1018猫爪印记，从Global窗口进入，不要送错榜单哦</span><span aria-hidden="true">白金妈们四平台billboard榜单积分送起！具体教程可以看vb 张函瑞_1018猫爪印记，从Global窗口进入，不要送错榜单哦</span></div></div>
   <div class="crest">
     <div class="bl">The Castle Run</div>
     <h1>菇菇大逃亡</h1>
